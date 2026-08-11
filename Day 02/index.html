@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="topbar">
+        <a href="#" class="logo">♫ MUSIC</a>
+
+        <form class="search">
+            <input
+                type="search"
+                placeholder="What do you want to play?"
+                aria-label="Search music"
+            >
+        </form>
+
+        <div class="header-actions">
+            <button>Notifications</button>
+            <button>Profile</button>
+        </div>
+    </header>
+
+
+    <div class="layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <nav>
+                <h2>Menu</h2>
+
+                <a href="#" class="active">⌂ Home</a>
+                <a href="#">⌕ Search</a>
+                <a href="#">▣ Your Library</a>
+                <a href="#">♥ Liked Songs</a>
+            </nav>
+
+            <nav class="playlists">
+                <h2>Playlists</h2>
+
+                <a href="#">Chill Vibes</a>
+                <a href="#">Workout Hits</a>
+                <a href="#">Focus Flow</a>
+                <a href="#">Road Trip</a>
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="content">
+
+            <h1>Good evening</h1>
+
+
+            <!-- Quick Picks -->
+            <section>
+
+                <div class="section-header">
+                    <h2>Quick Picks</h2>
+                    <a href="#">Show all</a>
+                </div>
+
+                <div class="music-grid">
+
+                    <article class="music-card">
+                        <div class="cover">
+                            <img
+                                src="https://placehold.co/300x300"
+                                alt="Daily Mix 1"
+                            >
+
+                            <button class="card-play" aria-label="Play Daily Mix 1">
+                                ▶
+                            </button>
+                        </div>
+
+                        <h3>Daily Mix 1</h3>
+                        <p>Your favorite artists and songs</p>
+                    </article>
+
+
+                    <article class="music-card">
+                        <div class="cover">
+                            <img
+                                src="https://placehold.co/300x300"
+                                alt="Daily Mix 2"
+                            >
+
+                            <button class="card-play" aria-label="Play Daily Mix 2">
+                                ▶
+                            </button>
+                        </div>
+
+                        <h3>Daily Mix 2</h3>
+                        <p>Music picked for you</p>
+                    </article>
+
+
+                    <article class="music-card">
+                        <div class="cover">
+                            <img
+                                src="https://placehold.co/300x300"
+                                alt="Discover Weekly"
+                            >
+
+                            <button class="card-play" aria-label="Play Discover Weekly">
+                                ▶
+                            </button>
+                        </div>
+
+                        <h3>Discover Weekly</h3>
+                        <p>New music every Monday</p>
+                    </article>
+
+
+                    <article class="music-card">
+                        <div class="cover">
+                            <img
+                                src="https://placehold.co/300x300"
+                                alt="Release Radar"
+                            >
+
+                            <button class="card-play" aria-label="Play Release Radar">
+                                ▶
+                            </button>
+                        </div>
+
+                        <h3>Release Radar</h3>
+                        <p>New releases from artists</p>
+                    </article>
+
+
+                    <article class="music-card">
+                        <div class="cover">
+                            <img
+                                src="https://placehold.co/300x300"
+                                alt="Chill Hits"
+                            >
+
+                            <button class="card-play" aria-label="Play Chill Hits">
+                                ▶
+                            </button>
+                        </div>
+
+                        <h3>Chill Hits</h3>
+                        <p>Relaxing songs for you</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Made For You -->
+            <section>
+
+                <div class="section-header">
+                    <h2>Made For You</h2>
+                    <a href="#">See all</a>
+                </div>
+
+                <div class="music-grid">
+
+                    <article class="music-card">
+                        <div class="cover">
+                            <img src="https://placehold.co/300x300" alt="Focus Flow">
+                            <button class="card-play" aria-label="Play Focus Flow">▶</button>
+                        </div>
+
+                        <h3>Focus Flow</h3>
+                        <p>Music for concentration</p>
+                    </article>
+
+
+                    <article class="music-card">
+                        <div class="cover">
+                            <img src="https://placehold.co/300x300" alt="Morning Energy">
+                            <button class="card-play" aria-label="Play Morning Energy">▶</button>
+                        </div>
+
+                        <h3>Morning Energy</h3>
+                        <p>Start your day with music</p>
+                    </article>
+
+
+                    <article class="music-card">
+                        <div class="cover">
+                            <img src="https://placehold.co/300x300" alt="Workout Hits">
+                            <button class="card-play" aria-label="Play Workout Hits">▶</button>
+                        </div>
+
+                        <h3>Workout Hits</h3>
+                        <p>High energy tracks</p>
+                    </article>
+
+
+                    <article class="music-card">
+                        <div class="cover">
+                            <img src="https://placehold.co/300x300" alt="Late Night">
+                            <button class="card-play" aria-label="Play Late Night">▶</button>
+                        </div>
+
+                        <h3>Late Night</h3>
+                        <p>Music for the night</p>
+                    </article>
+
+
+                    <article class="music-card">
+                        <div class="cover">
+                            <img src="https://placehold.co/300x300" alt="Acoustic">
+                            <button class="card-play" aria-label="Play Acoustic">▶</button>
+                        </div>
+
+                        <h3>Acoustic</h3>
+                        <p>Acoustic favorites</p>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Recently Played -->
+            <section>
+
+                <div class="section-header">
+                    <h2>Recently Played</h2>
+                    <a href="#">View history</a>
+                </div>
+
+                <div class="song-list">
+
+                    <article class="song">
+                        <img src="https://placehold.co/100x100" alt="Song artwork">
+
+                        <div>
+                            <h3>Song Title</h3>
+                            <p>Artist Name</p>
+                        </div>
+
+                        <time>3:42</time>
+                    </article>
+
+
+                    <article class="song">
+                        <img src="https://placehold.co/100x100" alt="Song artwork">
+
+                        <div>
+                            <h3>Another Song</h3>
+                            <p>Artist Name</p>
+                        </div>
+
+                        <time>4:12</time>
+                    </article>
+
+
+                    <article class="song">
+                        <img src="https://placehold.co/100x100" alt="Song artwork">
+
+                        <div>
+                            <h3>Favorite Track</h3>
+                            <p>Artist Name</p>
+                        </div>
+
+                        <time>2:58</time>
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- Bottom Player -->
+    <footer class="player-bar">
+
+        <div class="now-playing">
+            <img src="https://placehold.co/100x100" alt="Current song">
+
+            <div>
+                <h4>Song Title</h4>
+                <p>Artist Name</p>
+            </div>
+        </div>
+
+
+        <div class="player-controls">
+
+            <button aria-label="Previous">◀◀</button>
+
+            <button class="main-play" aria-label="Play">▶</button>
+
+            <button aria-label="Next">▶▶</button>
+
+        </div>
+
+
+        <div class="volume">
+            🔊
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
