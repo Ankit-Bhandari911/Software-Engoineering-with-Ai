@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Table Examples</title>
+</head>
+<body>
+  <h1>HTML Table Examples</h1>
+
+  <h2>1. Basic table</h2>
+  <table>
+    <caption>Simple people list</caption>
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">City</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ankit</td>
+        <td>21</td>
+        <td>KTM</td>
+      </tr>
+      <tr>
+        <td>Ankit Bhandari</td>
+        <td>25</td>
+        <td>KTM</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Bordered table (using border attribute)</h2>
+  <table border="1" cellpadding="4" cellspacing="0">
+    <caption>Products</caption>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Stock</th>
+    </tr>
+    <tr>
+      <td>Pen</td>
+      <td>Rs.20</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>Book</td>
+      <td>Rs.100</td>
+      <td>10</td>
+    </tr>
+  </table>
+
+  <h2>3. Table with header, footer and grouped columns</h2>
+  <table border="1">
+    <caption>Monthly report</caption>
+    <colgroup>
+      <col span="1">
+      <col span="2">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Sales</th>
+        <th>Expenses</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jan</td>
+        <td>5000</td>
+        <td>3000</td>
+      </tr>
+      <tr>
+        <td>Feb</td>
+        <td>6000</td>
+        <td>3500</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Total</td>
+        <td>11000</td>
+        <td>6500</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <h2>4. Table with rowspan and colspan</h2>
+  <table border="1">
+    <caption>Schedule</caption>
+    <tr>
+      <th>Time</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td rowspan="2">AI</td>
+      <td>Design</td>
+    </tr>
+    <tr>
+      <td>10:00</td>
+      <td>Coding</td>
+    </tr>
+    <tr>
+      <td>11:00</td>
+      <td colspan="2">GIT HUB(both days)</td>
+    </tr>
+  </table>
+</body>
+</html>

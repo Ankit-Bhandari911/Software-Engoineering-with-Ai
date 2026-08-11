@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* body {
+  background: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}  */
+
+/* Music card */
+.music-card {
+  width: 220px;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.music-card:hover {
+  background: black;
+  transform: translateY(-5px);
+} /* Album */
+.album {
+  position: relative;
+}
+.album img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+} /* Play button */
+.play-btn {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #1ed760;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+} /* Show play button on hover */
+.music-card:hover .play-btn {
+  opacity: 1;
+  transform: translateY(0);
+} /* Music information */
+.music-card h2 {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #666;
+}
+.music-card p {
+  margin-top: 6px;
+  color: #666;
+  font-size: 14px;
+}
