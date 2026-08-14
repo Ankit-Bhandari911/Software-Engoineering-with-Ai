@@ -49,7 +49,7 @@
   transform: translateY(10px);
   transition: 0.3s;
 } /* Show play button on hover */
-.music-card:hover .play-btn {
+.music-card:hover .play-btn { 
   opacity: 1;
   transform: translateY(0);
 } /* Music information */

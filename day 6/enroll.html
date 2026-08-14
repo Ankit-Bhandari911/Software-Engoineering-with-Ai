@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Enrollment Form</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <main>
+
+        <form class="enrollment-form">
+
+
+            <!-- =========================
+                 FULL NAME
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="full-name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="full-name"
+                    name="full-name"
+                    placeholder="Enter your Full Name"
+                >
+
+            </div>
+
+
+
+            <!-- =========================
+                 EMAIL
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your Email"
+                >
+
+            </div>
+
+
+
+            <!-- =========================
+                 PHONE NUMBER
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your Phone Number"
+                >
+
+            </div>
+
+
+
+            <!-- =========================
+                 ADDRESS
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="address">
+                    Address
+                </label>
+
+                <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Enter your Address"
+                >
+
+            </div>
+
+
+
+            <!-- =========================
+                 COURSE
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="course">
+                    Course
+                </label>
+
+
+                <!-- Course category buttons -->
+
+                <div class="course-options">
+
+                    <button type="button">
+                        JRP
+                    </button>
+
+                    <button type="button">
+                        Diploma
+                    </button>
+
+                    <button type="button">
+                        SEE
+                    </button>
+
+                    <button type="button">
+                        +2
+                    </button>
+
+                </div>
+
+
+                <!-- Course dropdown -->
+
+                <div class="select-wrapper">
+
+                    <select
+                        id="course"
+                        name="course"
+                    >
+
+                        <option value="">
+                            Select your course
+                        </option>
+
+                        <option value="web-development">
+                            Web Development
+                        </option>
+
+                        <option value="graphic-design">
+                            Graphic Design
+                        </option>
+
+                        <option value="digital-marketing">
+                            Digital Marketing
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 EDUCATION LEVEL
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="education">
+                    Education Level
+                </label>
+
+
+                <div class="select-wrapper">
+
+                    <select
+                        id="education"
+                        name="education"
+                    >
+
+                        <option value="">
+                            Select your education level
+                        </option>
+
+                        <option value="school">
+                            School
+                        </option>
+
+                        <option value="plus-two">
+                            +2
+                        </option>
+
+                        <option value="bachelor">
+                            Bachelor's
+                        </option>
+
+                        <option value="master">
+                            Master's
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 LEARNING FORMAT
+            ========================== -->
+
+            <fieldset class="form-group">
+
+                <legend>
+                    Preferred Learning Format
+                </legend>
+
+
+                <div class="radio-group">
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="learning-format"
+                            value="physical"
+                        >
+
+                        <span>
+                            Physical
+                        </span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="learning-format"
+                            value="online"
+                        >
+
+                        <span>
+                            Online
+                        </span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="learning-format"
+                            value="hybrid"
+                        >
+
+                        <span>
+                            Hybrid
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <!-- =========================
+                 LAPTOP
+            ========================== -->
+
+            <fieldset class="form-group">
+
+                <legend>
+                    Do you have a Laptop?
+                </legend>
+
+
+                <div class="radio-group">
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="laptop"
+                            value="yes"
+                        >
+
+                        <span>
+                            Yes
+                        </span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="laptop"
+                            value="no"
+                        >
+
+                        <span>
+                            No
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <!-- =========================
+                 HOW DID YOU FIND US
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="source">
+                    How did you find us?
+                </label>
+
+
+                <div class="select-wrapper">
+
+                    <select
+                        id="source"
+                        name="source"
+                    >
+
+                        <option value="">
+                            Select an option
+                        </option>
+
+                        <option value="google">
+                            Google
+                        </option>
+
+                        <option value="facebook">
+                            Facebook
+                        </option>
+
+                        <option value="instagram">
+                            Instagram
+                        </option>
+
+                        <option value="friend">
+                            Friend
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 REFERRAL
+            ========================== -->
+
+            <fieldset class="form-group">
+
+                <legend>
+                    Received any referrals?
+                </legend>
+
+
+                <div class="radio-group">
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="referral"
+                            value="yes"
+                        >
+
+                        <span>
+                            Yes
+                        </span>
+
+                    </label>
+
+
+                    <label class="radio-option">
+
+                        <input
+                            type="radio"
+                            name="referral"
+                            value="no"
+                        >
+
+                        <span>
+                            No
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+
+            <!-- =========================
+                 SUBMIT BUTTON
+            ========================== -->
+
+            <button
+                type="submit"
+                class="submit-button"
+            >
+                Submit Now
+            </button>
+
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

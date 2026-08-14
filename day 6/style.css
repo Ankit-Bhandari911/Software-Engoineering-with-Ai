@@ -1,0 +1,371 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #ffffff;
+
+    color: #111;
+
+    min-height: 100vh;
+}
+
+
+main {
+    width: 100%;
+}
+
+
+
+.enrollment-form {
+    width: min(100% - 100px, 900px);
+
+    margin: 0 auto;
+
+    padding: 100px 0;
+}
+
+
+
+.form-group {
+    margin-bottom: 90px;
+}
+
+
+
+.form-group > label,
+fieldset legend {
+    display: block;
+
+    margin-bottom: 60px;
+
+    color: #0d0d0d;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+
+    height: 60px;
+
+    padding: 0 0 20px;
+
+    border: none;
+
+    border-bottom: 2px solid #e5e5e5;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #222;
+
+    font-size: 23px;
+}
+
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+    color: #888;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    border-bottom-color: #159873;
+}
+
+
+
+.course-options {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+
+.course-options button {
+    padding: 13px 28px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 50px;
+
+    background: #fff;
+
+    color: #444;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.course-options button:hover {
+    border-color: #159873;
+
+    color: #159873;
+}
+
+
+
+.select-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+
+
+.select-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 35px;
+
+    width: 12px;
+
+    height: 12px;
+
+    border-right: 3px solid #9099a6;
+
+    border-bottom: 3px solid #9099a6;
+
+    transform: translateY(-70%) rotate(45deg);
+
+    pointer-events: none;
+}
+
+
+
+select {
+    width: 100%;
+
+    height: 80px;
+
+    padding: 0 25px;
+
+    border: none;
+
+    border-bottom: 2px solid #e5e5e5;
+
+    outline: none;
+
+    background: #fff;
+
+    color: #94a1b3;
+
+    font-size: 22px;
+
+    appearance: none;
+
+    cursor: pointer;
+}
+
+
+select:focus {
+    border-bottom-color: #159873;
+}
+
+
+/* Education dropdown */
+
+#education {
+    background: #f8f8f8;
+
+    border-radius: 20px 20px 0 0;
+}
+
+
+fieldset {
+    border: none;
+
+    padding: 0;
+
+    margin-left: 0;
+
+    margin-right: 0;
+}
+
+
+
+.radio-group {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 2px solid #e5e5e5;
+}
+
+
+.radio-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    color: #444;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+
+.radio-option input[type="radio"] {
+    appearance: none;
+
+    width: 40px;
+
+    height: 40px;
+
+    margin: 0;
+
+    border: 2px solid #e7e7e7;
+
+    border-radius: 50%;
+
+    background: #fafafa;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+
+
+.radio-option input[type="radio"]:checked {
+    border-color: #159873;
+}
+
+
+
+
+.radio-option input[type="radio"]:checked::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 20px;
+
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: #159873;
+
+    transform: translate(-50%, -50%);
+}
+
+
+
+.submit-button {
+    display: inline-block;
+
+    padding: 25px 40px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #159873;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 5px 6px 0 #075c48;
+
+    transition: 0.2s;
+}
+
+
+.submit-button:hover {
+    transform: translateY(-2px);
+}
+
+
+.submit-button:active {
+    transform: translateY(2px);
+
+    box-shadow: 2px 3px 0 #075c48;
+}
+
+
+@media (max-width: 800px) {
+
+    .enrollment-form {
+        width: min(100% - 60px, 700px);
+
+        padding: 80px 0;
+    }
+
+
+    .form-group > label,
+    fieldset legend {
+        font-size: 28px;
+
+        margin-bottom: 50px;
+    }
+
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        font-size: 20px;
+    }
+
+
+    select {
+        font-size: 20px;
+    }
+
+
+    .radio-option {
+        font-size: 22px;
+    }
+}
+
