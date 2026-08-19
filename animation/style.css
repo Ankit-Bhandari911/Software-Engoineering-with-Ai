@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+
+    display: grid;
+
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.box {
+    height: 300px;
+
+    border: 2px solid #222;
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+
+    transition: box-shadow 0.3s ease;
+}
+
+
+
+.box p {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+
+
+.box1 {
+    animation: rotateBox 4s infinite ease-in-out;
+}
+
+@keyframes rotateBox {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.box2 {
+    animation: scaleBox 3s infinite ease-in-out;
+}
+
+@keyframes scaleBox {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.box3 {
+    animation: moveBox 4s infinite ease-in-out;
+}
+
+@keyframes moveBox {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.box4 {
+    animation: skewBox 3s infinite ease-in-out;
+}
+
+@keyframes skewBox {
+
+    0% {
+        transform: skew(0deg);
+    }
+
+    50% {
+        transform: skew(8deg, 4deg);
+    }
+
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+
+
+
+
+
+.music {
+    position: fixed;
+
+    bottom: 10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    text-align: center;
+
+    background: white;
+
+    padding: 12px 20px;
+
+    border-radius: 15px;
+
+}
+

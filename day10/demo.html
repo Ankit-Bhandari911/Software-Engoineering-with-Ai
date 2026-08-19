@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Position Demo</title>
+
+  <style>
+    .box {
+      width: 150px;
+      height: 100px;
+      padding: 20px;
+      margin: 20px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+  
+    .static {
+      background-color: red;
+      position: static;
+    }
+
+   
+    .relative {
+      background-color: blue;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+  
+    .absolute {
+      background-color: green;
+      position: absolute;
+      top: 250px;
+      left: 250px;
+    }
+
+  
+    .fixed {
+      background-color: purple;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+  
+    .sticky {
+      background-color: orange;
+      position: sticky;
+      top: 0;
+    }
+
+    .content {
+      height: 1000px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box static">
+    Static
+  </div>
+
+  <div class="box relative">
+    Relative
+  </div>
+
+  <div class="box absolute">
+    Absolute
+  </div>
+
+  <div class="box fixed">
+    Fixed
+  </div>
+
+  <div class="box sticky">
+    Sticky
+  </div>
+
+  <div class="content">
+    Scroll the page to see the Sticky and Fixed boxes.
+  </div>
+
+</body>
+</html>

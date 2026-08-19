@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Hide checkbox */
+#menu {
+    display: none;
+}
+
+/* Menu button */
+.button {
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: black;
+
+    position: fixed;
+    left: -200px;
+    top: 0;
+
+    padding-top: 50px;
+}
+
+/* Menu items */
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+/* Hover effect */
+.sidebar a:hover {
+    background-color: gray;
+}
+
+/* Show sidebar when checkbox is clicked */
+#menu:checked ~ .sidebar {
+    left: 0;
+}

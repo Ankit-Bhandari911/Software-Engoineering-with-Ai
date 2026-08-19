@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Position Property Demo — Farmhouse Hero</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: #1c1d1f;
+        overflow: hidden;
+      }
+
+      .house-img {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* center the image */
+        width: 75%;
+        max-width: 1000px;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 48px;
+        color: #f2f2f2;
+        /* keeps navbar above everything else */
+      }
+      .navbar .logo {
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 32px;
+      }
+      .navbar a {
+        color: #f2f2f2;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .navbar .cta {
+        border: 1px solid #f2f2f2;
+        padding: 8px 18px;
+        border-radius: 20px;
+        font-size: 14px;
+      }
+
+      .title {
+        position: absolute;
+        top: 28%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: #f2f2f2;
+        font-size: 100px;
+        font-weight: 800;
+        letter-spacing: 3px;
+        z-index: 1; /* h1 appears on top of house */
+        
+      }
+      .homes{
+        animation: home 1s ease-in backwards;
+        z-index: 2;
+      }
+
+      @keyframes home {
+        from {
+          clip-path: inset(100%, 0, 0, 0);
+        }
+        to {
+          clip-path: inset(0, 0, 0, 0);
+        }
+      }
+
+      .scroll {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #f2f2f2;
+        font-size: 20px;
+
+        animation: bounce 1.6s infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translate(-50%, 0);
+        }
+        50% {
+          transform: translate(-50%, 8px);
+        }
+      }
+
+      .projects {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 80px 40px;
+        display: flex;
+        gap: 60px;
+      }
+
+      .sticky-note {
+        position: sticky;
+        top: 100px; /* sticks 100px from the top of the viewport */
+        align-self: flex-start;
+        width: 280px;
+        background: #f4f2ee;
+        padding: 28px;
+        border-radius: 8px;
+      }
+      .sticky-note h3 {
+        margin-bottom: 12px;
+        font-size: 20px;
+      }
+      .sticky-note p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .project-list {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      .project-card {
+        height: 260px;
+        background: #e5e2db;
+        border-radius: 8px;
+        padding: 24px;
+        font-size: 14px;
+        color: #444;
+      }
+      .project-card h4 {
+        margin-bottom: 8px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <!-- position: relative anchor -->
+
+      <img
+        class="house-img"
+        src="house.png"
+        alt="Farmhouse"
+      /><!-- position: absolute -->
+
+      <nav class="navbar">
+        <!-- position: fixed -->
+        <div class="logo">🏠 FARMHOUSE FRAME</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="cta">Get in Touch</div>
+      </nav>
+
+      <h1 class="title">MODERN</h1>
+      <h2
+        style="
+          color: #f2f2f2;
+          position: absolute;
+          left: 50%;
+          top: 55%;
+          transform: translateX(-50%);
+          font-size: 90px;
+          font-weight: 800;
+          text-align: center;
+          letter-spacing: 3px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        "
+        class="homes"
+      >
+        HOMES
+      </h2>
+
+      <div class="scroll">⌄</div>
+    </div>
+
+    <section class="projects">
+      <div class="sticky-note">
+        <!-- position: sticky -->
+        <h3>Our Projects</h3>
+        <p>
+          . Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+          necessitatibus cum consequatur harum animi, dolore blanditiis
+          dignissimos doloribus obcaecati id iste rerum ex, nisi assumenda
+          inventore ipsum voluptate modi numquam? next to it runs out of room.
+        </p>
+      </div>
+
+      <div class="project-list">
+        <div class="project-card">
+          <h4>The Willow Farmhouse</h4>
+          <p>
+            A 4-bed modern farmhouse with a wraparound porch and
+            board-and-batten siding.
+          </p>
+        </div>
+        <div class="project-card">
+          <h4>Maple Ridge Cottage</h4>
+          <p>
+            Compact single-story layout designed for a narrow countryside lot.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
