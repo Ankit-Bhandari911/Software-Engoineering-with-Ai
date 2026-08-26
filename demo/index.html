@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:has(span){
+            background: #000;
+        }
+        p:focus{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p tabindex="0"><strong>sululu</strong></p>
+        <p><span>sululu</span></p>
+        <p>sululu</p>
+        <p>sululu</p>
+        <p tabindex="1">sululu</p>
+    </div>
+</body>
+</html>
