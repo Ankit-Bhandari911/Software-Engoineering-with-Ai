@@ -18,7 +18,7 @@ boxes.forEach((box) => {
   box.addEventListener("click", () => {
     console.log("clicked");
     if (turno) {
-      //o ko palo
+    
       box.innerText = "o"; 
       turno = false;
     } else {

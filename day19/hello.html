@@ -1,0 +1,178 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .todo-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .input-box {
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-btn {
+            background-color: green;
+            color: white;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #eee;
+        }
+
+        /* Line-through when task is deleted */
+        .deleted {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .delete-btn {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="todo-container">
+
+        <h1>Todo List</h1>
+
+        <div class="input-box">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+
+            <button class="add-btn" onclick="addTask()">
+                Add
+            </button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+
+    <script>
+
+        // Array
+        let tasks = [];
+
+
+        // Add task
+        function addTask() {
+
+            let input = document.getElementById("taskInput");
+
+            let task = input.value.trim();
+
+            if (task === "") {
+                alert("Please enter a task");
+                return;
+            }
+
+            // Add task to array
+            tasks.push({
+                text: task,
+                deleted: false
+            });
+
+            input.value = "";
+
+            displayTasks();
+        }
+
+
+        // Display tasks
+        function displayTasks() {
+
+            let taskList = document.getElementById("taskList");
+
+            taskList.innerHTML = "";
+
+            tasks.forEach(function(task, index) {
+
+                let li = document.createElement("li");
+
+                let span = document.createElement("span");
+
+                span.textContent = task.text;
+
+
+                // If deleted, apply line-through
+                if (task.deleted) {
+                    span.classList.add("deleted");
+                }
+
+
+                // Delete button
+                let deleteButton = document.createElement("button");
+
+                deleteButton.textContent = "Delete";
+
+                deleteButton.classList.add("delete-btn");
+
+
+                deleteButton.onclick = function() {
+
+                    // DON'T remove from array
+                    // Just mark it as deleted
+                    tasks[index].deleted = true;
+
+                    displayTasks();
+                };
+
+
+                li.appendChild(span);
+                li.appendChild(deleteButton);
+
+                taskList.appendChild(li);
+            });
+        }
+
+    </script>
+
+</body>
+</html>
+```
